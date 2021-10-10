@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Roboto';
+  background-color: #a3c3c3;
+}
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: 5rem auto;
+  max-width: 1170px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 992px) {
+  .container {
+    width: 95vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title-part h1 {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+}
+.underline {
+  height: 0.25rem;
+  width: 100px;
+  background-color: #d68812;
+  margin: 1rem auto;
+}
+li {
+  list-style: none;
+}
+
+.showcase {
+  padding: 0.5rem;
+  margin-top: 2rem;
+  display: flex;
+  /* align-items: center; */
+}
+
+.btn-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  padding: 0.5rem;
+}
+
+.job-open {
+  margin-left: 3rem;
+  padding: 0.5rem;
+}
+.job-open h3,
+.job-open h4 {
+  margin-top: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+.job-title {
+  margin-bottom: 0.5rem;
+}
+
+.job-open h4 {
+  margin-bottom: 0.5rem;
+}
+.job-company {
+  color: #d68812;
+}
+
+li {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+li p {
+  margin-left: 2rem;
+  line-height: 1.5rem;
+}
+li span {
+  color: #d68812;
 }
 
-.App-link {
-  color: #61dafb;
+.primary-btn {
+  display: block;
+  margin-bottom: 2rem;
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+  padding: 0.25rem 0;
+  line-height: 1;
+  outline-color: hsl(185, 57%, 50%);
+}
+.primary-btn:hover {
+  background-color: hsl(185, 57%, 50%);
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 600px) {
+  .showcase {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .primary-btn {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.9rem;
   }
 }
